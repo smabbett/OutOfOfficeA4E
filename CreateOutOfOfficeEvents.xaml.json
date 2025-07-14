@@ -1,0 +1,81 @@
+{
+  "DisplayName": "Main",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_groupEmail",
+      "DisplayName": "in_groupEmail",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "AMER-Public-Sector-TAMs@uipath.com",
+      "Widget": null,
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_startDate",
+      "DisplayName": "in_startDate",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "2025-07-19",
+      "Widget": null,
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_endDate",
+      "DisplayName": "in_endDate",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "2025-07-22",
+      "Widget": null,
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_subject",
+      "DisplayName": "in_subject",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "Test OOO",
+      "Widget": null,
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_content",
+      "DisplayName": "in_content",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "This is a test of the OOO automation.",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_resultMessage",
+      "DisplayName": "out_resultMessage",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}
