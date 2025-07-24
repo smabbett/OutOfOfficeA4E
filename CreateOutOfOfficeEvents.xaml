@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_groupEmail="TEAM-AMER-PUBSEC@uipath.com" this:Main.in_startDate="2025-07-19" this:Main.in_endDate="2025-07-20" this:Main.in_subject="Test OOO" this:Main.in_content="This is a test of the OOO automation." xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_groupEmail="TEAM-AMER-PUBSEC@uipath.com" this:Main.in_startDate="08/01/25" this:Main.in_endDate="08/02/25" this:Main.in_subject="Sarah Test OOO" this:Main.in_content="This is a test of the OOO automation." xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_resultMessage" Type="OutArgument(x:String)" />
     <x:Property Name="in_groupEmail" Type="InArgument(x:String)">
@@ -23,22 +23,19 @@
     </x:Property>
     <x:Property Name="in_content" Type="InArgument(x:String)" />
   </x:Members>
-  <VisualBasic.Settings>
-    <x:Null />
-  </VisualBasic.Settings>
-  <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1062.4,1553.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="47">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
       <x:String>System.Activities.Expressions</x:String>
       <x:String>System.Activities.Validation</x:String>
       <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
       <x:String>Microsoft.VisualBasic.Activities</x:String>
-      <x:String>System</x:String>
       <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
@@ -51,7 +48,6 @@
       <x:String>System.Xml</x:String>
       <x:String>System.Xml.Linq</x:String>
       <x:String>UiPath.Core</x:String>
-      <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
@@ -65,7 +61,6 @@
       <x:String>UiPath.MicrosoftOffice365.Activities.Calendar.Enums</x:String>
       <x:String>UiPath.MicrosoftOffice365.Calendar.Models</x:String>
       <x:String>UiPath.MicrosoftOffice365.Activities.Calendar</x:String>
-      <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
       <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
       <x:String>UiPath.MicrosoftOffice365.Activities.General.Enums</x:String>
@@ -78,10 +73,10 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Collections.Specialized</x:String>
       <x:String>UiPath.Web.Activities</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
@@ -140,9 +135,9 @@
       <AssemblyReference>System.Linq.Parallel</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1299.2,2105.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1299.2,2384.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:CurrentJobInfo" Name="JobData" />
     </Sequence.Variables>
@@ -151,8 +146,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap:VirtualizedContainerService.HintSize="528,121.6" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
     <ui:GetCurrentJobInfo DisplayName="Get Job Information" sap:VirtualizedContainerService.HintSize="528,122.4" sap2010:WorkflowViewState.IdRef="GetCurrentJobInfo_1" Result="[JobData]" />
-    <ui:LogMessage DisplayName="Log Message - Start" sap:VirtualizedContainerService.HintSize="528,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[JobData.WorkflowName]">
+    <ui:LogMessage DisplayName="Log Message - Start" sap:VirtualizedContainerService.HintSize="528,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Starting &quot; + JobData.WorkflowName]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -160,13 +156,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <TryCatch DisplayName="Try Executing Automation" sap:VirtualizedContainerService.HintSize="528,1620" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Executing Automation" sap:VirtualizedContainerService.HintSize="528,1777.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="494.4,977.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="494.4,1091.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="userTimeZone" />
-            <Variable x:TypeArguments="x:String" Name="adjustedEndDate" />
             <Variable x:TypeArguments="x:String" Name="eventBody" />
+            <Variable x:TypeArguments="s:DateTime" Name="adjustedEndDate" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -184,10 +180,10 @@
           </Assign>
           <Assign DisplayName="Assign - adjusted End Date" sap:VirtualizedContainerService.HintSize="460.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
             <Assign.To>
-              <OutArgument x:TypeArguments="x:String">[adjustedEndDate]</OutArgument>
+              <OutArgument x:TypeArguments="s:DateTime">[adjustedEndDate]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">[Date.Parse(in_endDate).AddDays(1).ToString("yyyy-MM-dd")]</InArgument>
+              <InArgument x:TypeArguments="s:DateTime">[DateTime.Parse(in_endDate).AddDays(1)]</InArgument>
             </Assign.Value>
           </Assign>
           <Assign DisplayName="Assign - Event Body" sap:VirtualizedContainerService.HintSize="460.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_8">
@@ -212,11 +208,19 @@
               <InArgument x:TypeArguments="x:String">[$"{{""subject"":""{in_subject}"",""body"":{{""contentType"":""HTML"",""content"":""{in_content}""}},""start"":{{""dateTime"":""{in_startDate}"",""timeZone"":""{userTimeZone}""}},""end"":{{""dateTime"":""{adjustedEndDate}"",""timeZone"":""{userTimeZone}""}},""isAllDay"":true,""showAs"":""oof""}}"]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CreatePersonalEvent - Invoke Workflow File (CreatePersonalEvent.xaml)" sap:VirtualizedContainerService.HintSize="460.8,227.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="CreatePersonalEvent.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CreatePersonalEvent - Invoke Workflow File (CreatePersonalEvent.xaml)" sap:VirtualizedContainerService.HintSize="460.8,236" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="CreatePersonalEvent.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_eventBody">[eventBody]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
+          <Assign DisplayName="Assign Variable Value - out Message 'Success'" sap:VirtualizedContainerService.HintSize="460.8,104.8" sap2010:WorkflowViewState.IdRef="Assign_10">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[out_resultMessage]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[String.Format("The event was created with the following properties: {0}{1}Would you like to send an email to the group email address so that all members will be notified of the event?", eventBody, Environment.NewLine)]</InArgument>
+            </Assign.Value>
+          </Assign>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
@@ -232,7 +236,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Assign ResultMessage" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign DisplayName="Assign - out Message 'Failure'" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[out_resultMessage]</OutArgument>
                 </Assign.To>
@@ -247,7 +251,7 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,68.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -258,7 +262,7 @@
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
-    <ui:LogMessage DisplayName="Log Message - End" sap:VirtualizedContainerService.HintSize="528,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;/&quot; + JobData.WorkflowName]">
+    <ui:LogMessage DisplayName="Log Message - End" sap:VirtualizedContainerService.HintSize="528,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Completed &quot; + JobData.WorkflowName]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

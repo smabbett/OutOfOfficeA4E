@@ -1,0 +1,40 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "CreateOutOfOfficeEvents.xaml",
+      "uniqueId": "ad21607a-2269-484f-bdbd-a856baacfe94",
+      "type": "Process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_groupEmail": {
+            "type": "string"
+          },
+          "in_startDate": {
+            "type": "string"
+          },
+          "in_endDate": {
+            "type": "string"
+          },
+          "in_subject": {
+            "type": "string"
+          },
+          "in_content": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "out_resultMessage": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ]
+}

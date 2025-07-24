@@ -1,0 +1,6 @@
+{
+  "ProjectType": "Process",
+  "Name": "Out Of Office Autopilot",
+  "Description": "Creates an Outlook calendar event on group calendar and personal calendar for out of office event such as PTO, Sick time, Personal Leave, Conferences. etc",
+  "MainFile": "CreateOutOfOfficeEvents.xaml"
+}

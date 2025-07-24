@@ -1,14 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CreateGroupEvent" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umag="clr-namespace:UiPath.MicrosoftOffice365.Activities.General;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umage="clr-namespace:UiPath.MicrosoftOffice365.Activities.General.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umag="clr-namespace:UiPath.MicrosoftOffice365.Activities.General;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umage="clr-namespace:UiPath.MicrosoftOffice365.Activities.General.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_eventBody" Type="InArgument(x:String)" />
     <x:Property Name="in_groupEmail" Type="InArgument(x:String)" />
   </x:Members>
-  <VisualBasic.Settings>
-    <x:Null />
-  </VisualBasic.Settings>
-  <sap2010:WorkflowViewState.IdRef>CreateGroupEvent_1</sap2010:WorkflowViewState.IdRef>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="76">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -47,10 +44,16 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Numerics</x:String>
-    </sco:Collection>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Calendar.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Calendar.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Calendar.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Calendar</x:String>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
@@ -100,9 +103,11 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
-    </sco:Collection>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CreateGroupEvent" sap:VirtualizedContainerService.HintSize="1299.2,2657.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CreateGroupEvent" sap:VirtualizedContainerService.HintSize="1299.2,2634.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="responseGroupEvent" />
       <Variable x:TypeArguments="x:Int32" Name="responseStatusGroupEvent" />
@@ -116,7 +121,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <umag:HttpRequestConnections Body="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" HeadersVariable="{x:Null}" ParametersVariable="{x:Null}" ResponseHeaders="{x:Null}" Scopes="{x:Null}" AuthScopesInvalid="False" ConnectionId="843ac6e8-8a9c-4ec8-9ddc-79bfea1a3ddc" DisplayName="Microsoft 365 HTTP Request - Get Calendar ID" HeadersInputMode="Build" sap:VirtualizedContainerService.HintSize="516.8,422.4" sap2010:WorkflowViewState.IdRef="HttpRequestConnections_1" ParametersInputMode="Build" RequestMethod="GET" RequestUrl="[$&quot;https://graph.microsoft.com/v1.0/groups?$filter=mail eq '{in_groupEmail}'&quot;]" ResponseContent="[responseCalendarID]" ResponseStatus="[responseStatusCalendarID]" UseConnectionService="True">
+    <umag:HttpRequestConnections Body="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" HeadersVariable="{x:Null}" ParametersVariable="{x:Null}" ResponseHeaders="{x:Null}" Scopes="{x:Null}" AuthScopesInvalid="False" ConnectionId="5235f2f0-2b28-4f46-9579-b1528aaaca53" DisplayName="Microsoft 365 HTTP Request - Get Calendar ID" HeadersInputMode="Build" sap:VirtualizedContainerService.HintSize="516.8,602.4" sap2010:WorkflowViewState.IdRef="HttpRequestConnections_1" ParametersInputMode="Build" RequestMethod="GET" RequestUrl="[$&quot;https://graph.microsoft.com/v1.0/groups?$filter=mail eq '{in_groupEmail}'&quot;]" ResponseContent="[responseCalendarID]" ResponseStatus="[responseStatusCalendarID]" UseConnectionService="True">
       <umag:HttpRequestConnections.Headers>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </umag:HttpRequestConnections.Headers>
@@ -138,7 +143,7 @@
         </usau:BackupSlot>
       </umag:HttpRequestConnections.ParametersBackup>
     </umag:HttpRequestConnections>
-    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="516.8,355.2" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jObj]" JsonString="[responseCalendarID]" />
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="516.8,152" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jObj]" JsonString="[responseCalendarID]" />
     <If Condition="[responseStatusCalendarID &lt;&gt; 200 OrElse jObj(&quot;value&quot;).Count = 0]" DisplayName="If - status is not 200 or group ID not found" sap:VirtualizedContainerService.HintSize="516.8,608" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -211,7 +216,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <umag:HttpRequestConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" HeadersVariable="{x:Null}" ParametersVariable="{x:Null}" ResponseHeaders="{x:Null}" Scopes="{x:Null}" AuthScopesInvalid="False" Body="[in_eventBody]" ConnectionId="843ac6e8-8a9c-4ec8-9ddc-79bfea1a3ddc" DisplayName="Microsoft 365 HTTP Request - Create Event Group Calendar" HeadersInputMode="Build" sap:VirtualizedContainerService.HintSize="516.8,422.4" sap2010:WorkflowViewState.IdRef="HttpRequestConnections_2" ParametersInputMode="Build" RequestMethod="[UiPath.MicrosoftOffice365.Activities.General.Enums.RequestMethod.POST]" RequestUrl="[$&quot;https://graph.microsoft.com/v1.0/groups/{groupID}/calendar/events&quot;]" ResponseContent="[responseGroupEvent]" ResponseStatus="[responseStatusGroupEvent]" UseConnectionService="True">
+    <umag:HttpRequestConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" HeadersVariable="{x:Null}" ParametersVariable="{x:Null}" ResponseHeaders="{x:Null}" Scopes="{x:Null}" AuthScopesInvalid="False" Body="[in_eventBody]" ConnectionId="ed0ac580-026c-4bef-a79e-f19599a58686" DisplayName="Microsoft 365 HTTP Request - Create Event Group Calendar" HeadersInputMode="Build" sap:VirtualizedContainerService.HintSize="516.8,422.4" sap2010:WorkflowViewState.IdRef="HttpRequestConnections_2" ParametersInputMode="Build" RequestMethod="[UiPath.MicrosoftOffice365.Activities.General.Enums.RequestMethod.POST]" RequestUrl="[$&quot;https://graph.microsoft.com/v1.0/groups/{groupID}/calendar/events&quot;]" ResponseContent="[responseGroupEvent]" ResponseStatus="[responseStatusGroupEvent]" UseConnectionService="True">
       <umag:HttpRequestConnections.Headers>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </umag:HttpRequestConnections.Headers>
