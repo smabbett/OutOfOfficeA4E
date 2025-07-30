@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_groupEmail="TEAM-AMER-PUBSEC@uipath.com" this:Main.in_startDate="07/31/25" this:Main.in_endDate="08/01/25" this:Main.in_subject="Sarah Test OOO" this:Main.in_content="This is a test of the OOO automation." xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_resultMessage" Type="OutArgument(x:String)" />
     <x:Property Name="in_groupEmail" Type="InArgument(x:String)">
@@ -178,7 +178,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:IsMatch DisplayName="Is Text Matching" sap:VirtualizedContainerService.HintSize="584,204" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[in_groupEmail]" IsBuilderTabModified="False" Pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" RegexOption="IgnoreCase, Compiled" Result="[isEmailValid]" />
+          <ui:IsMatch DisplayName="Is Text Matching - valid email" sap:VirtualizedContainerService.HintSize="584,204" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[in_groupEmail]" IsBuilderTabModified="False" Pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" RegexOption="IgnoreCase, Compiled" Result="[isEmailValid]" />
           <If Condition="[not isEmailValid]" sap:VirtualizedContainerService.HintSize="584,433.6" sap2010:WorkflowViewState.IdRef="If_4">
             <If.Then>
               <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="483.2,173.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
@@ -340,6 +340,11 @@
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CreatePersonalEvent - Invoke Workflow File (CreatePersonalEvent.xaml)" sap:VirtualizedContainerService.HintSize="584,236" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="CreatePersonalEvent.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_eventBody">[eventBody]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_subject">[in_subject]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_content">[in_content]</InArgument>
+              <InArgument x:TypeArguments="s:DateTime" x:Key="in_startDate">[startDate]</InArgument>
+              <InArgument x:TypeArguments="s:DateTime" x:Key="in_endDate">[DateTime.Parse(in_endDate)]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_timeZone">[userTimeZone]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <Assign DisplayName="Assign Variable Value - out Message 'Success'" sap:VirtualizedContainerService.HintSize="584,104.8" sap2010:WorkflowViewState.IdRef="Assign_10">
