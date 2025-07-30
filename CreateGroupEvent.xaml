@@ -107,7 +107,7 @@
       <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CreateGroupEvent" sap:VirtualizedContainerService.HintSize="1299.2,2634.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CreateGroupEvent" sap:VirtualizedContainerService.HintSize="1299.2,2520.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="responseGroupEvent" />
       <Variable x:TypeArguments="x:Int32" Name="responseStatusGroupEvent" />
@@ -180,42 +180,6 @@
         <InArgument x:TypeArguments="x:String">[jObj("value")(0)("id").ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:CommentOut DisplayName="Disabled activities" sap:VirtualizedContainerService.HintSize="516.8,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="483.2,225.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Group ID: &quot; + groupID]" />
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
-    <ui:CommentOut DisplayName="Disabled activities" sap:VirtualizedContainerService.HintSize="516.8,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="483.2,225.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Sending JSON: &quot; + eventBody]" />
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
     <umag:HttpRequestConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" HeadersVariable="{x:Null}" ParametersVariable="{x:Null}" ResponseHeaders="{x:Null}" Scopes="{x:Null}" AuthScopesInvalid="False" Body="[in_eventBody]" ConnectionId="ed0ac580-026c-4bef-a79e-f19599a58686" DisplayName="Microsoft 365 HTTP Request - Create Event Group Calendar" HeadersInputMode="Build" sap:VirtualizedContainerService.HintSize="516.8,422.4" sap2010:WorkflowViewState.IdRef="HttpRequestConnections_2" ParametersInputMode="Build" RequestMethod="[UiPath.MicrosoftOffice365.Activities.General.Enums.RequestMethod.POST]" RequestUrl="[$&quot;https://graph.microsoft.com/v1.0/groups/{groupID}/calendar/events&quot;]" ResponseContent="[responseGroupEvent]" ResponseStatus="[responseStatusGroupEvent]" UseConnectionService="True">
       <umag:HttpRequestConnections.Headers>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
