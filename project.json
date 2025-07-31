@@ -2,7 +2,7 @@
   "name": "Out Of Office Autopilot",
   "projectId": "ddde6ee6-3881-4ab9-9d30-c90becd493ea",
   "previousProjectId": "767dc388-c7ae-4f4e-93e2-c196bb215f94",
-  "description": "Creates an Outlook calendar event on group calendar (shown as \"free\") and personal calendar (shown as \"out-of-office\") for out of office event such as PTO, sick time, personal leave, conferences. etc. This is for whole day events so hours and minutes are not used for start date and end date.",
+  "description": "Creates an Outlook calendar event on group calendar (shown as \"free\") and personal calendar (shown as \"out-of-office\") for out of office event such as PTO, sick time, personal leave, conferences. etc. Optionally, content and attendees can be added to the event.",
   "main": "CreateOutOfOfficeEvents.xaml",
   "dependencies": {
     "UiPath.MicrosoftOffice365.Activities": "[3.2.10]",
@@ -14,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.12.0",
-  "projectVersion": "1.0.9",
+  "projectVersion": "1.0.10",
   "runtimeOptions": {
     "exceptionHandlerWorkflow": "GlobalHandler.xaml",
     "autoDispose": false,
